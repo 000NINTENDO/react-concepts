@@ -1,7 +1,10 @@
 import React from "react";
 
-const home = () => {
-  return <div>Home component</div>;
+const Home = (props: any) => {
+  if (!props.name) {
+    return <div>Hey Stranger!</div>;
+  }
+  return <div>Hello {props.name}!</div>;
 };
 
-export default home;
+export default Home;
